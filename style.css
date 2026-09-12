@@ -196,9 +196,19 @@ h1 {
 }
 
 .card-content p:last-child {
-	margin: 0;
-	color: #4d6472;
-	font-size: 0.95rem;
+  margin: 0;
+  color: #4d6472;
+  font-size: 0.95rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.timeline-card:hover .card-content p:last-child {
+	max-height: 200px;
+  opacity: 1;
+  margin-top: 12px;
 }
 
 footer {
